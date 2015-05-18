@@ -1,7 +1,16 @@
-body .slide:not(:first-child) {
-  display: none;
-}
-
 #results #cheapest {
   font-size: 2em;
+}
+
+
+.jumbotron {
+  text-align: center;
+}
+
+.slide {
+  transition: height 5s ease-in-out;
+}
+
+.hidden-height {
+  height: 0px;
 }

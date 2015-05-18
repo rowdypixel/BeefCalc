@@ -27,14 +27,14 @@ $(document).ready(function() {
         $('#results #all').append('<li>' + price.percent + '% beef: $' + price.price + '/lb</li>');
     })
 
-    $('.slide').hide();
-    $('#results-slide').show();
+    $('.slide').addClass('hidden');
+    $('#results-slide').removeClass('hidden');
   });
 
 
   $('input#start-button').click(function() {
-    $('.slide').hide();
-    $('#calculator-slide').show();
+    $('.slide').addClass('hidden');
+    $('#calculator-slide').removeClass('hidden');
   });
 
   function getRealPrice(percentLean, price) {

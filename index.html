@@ -19,29 +19,35 @@
     <![endif]-->
   </head>
   <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>The Ground Beef Calculator</h1>
+        <h3>Get "moo"re for your money!</h3>
+      </div>
+    </div>
     <div class="container slide" id="calculator-slide">
       <div class="row">
         <div class="col-md-12">
-          <h1>Enter the Beef Prices</h1>
+          <h1>Enter Price Per Pound</h1>
           <form>
             <div class="form-group">
               <label>73/27</label>
               <div class="input-group">
-                <span class="input-group-addon">$</span><input class="form-control beef-price" data-lean-percent="73" type="text" name="name" value="3.26"><span class="input-group-addon">/lb</span>
+                <span class="input-group-addon">$</span><input class="form-control beef-price" data-lean-percent="73" type="text" value="3.26"><span class="input-group-addon">/lb</span>
               </div>
             </div>
 
             <div class="form-group">
               <label>80/20</label>
               <div class="input-group">
-                <span class="input-group-addon">$</span><input class="form-control beef-price" data-lean-percent="80" type="text" name="name" value="10"><span class="input-group-addon">/lb</span>
+                <span class="input-group-addon">$</span><input class="form-control beef-price" data-lean-percent="80" type="text" value="10"><span class="input-group-addon">/lb</span>
               </div>
             </div>
 
             <div class="form-group">
               <label>85/15</label>
               <div class="input-group">
-                <span class="input-group-addon">$</span><input class="form-control beef-price" data-lean-percent="85" type="text" name="name" value="10.5"><span class="input-group-addon">/lb</span>
+                <span class="input-group-addon">$</span><input class="form-control beef-price" data-lean-percent="85" type="text" value="10.5"><span class="input-group-addon">/lb</span>
               </div>
             </div>
             <input class="btn btn-primary pull-right" id="calculate-button" type="button" name="submit-button" value="Which is best?">
@@ -49,7 +55,7 @@
         </div>
       </div>
     </div>
-    <div class="container slide" id="results-slide">
+    <div class="container slide hidden" id="results-slide">
       <div class="row">
         <div class="col-md-4">
           <h1>And the winner is...</h1>
