@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,7 +19,7 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container">
+    <div class="container slide" id="calculator-slide">
       <div class="row">
         <div class="col-md-12">
           <h1>Enter the Beef Prices</h1>
@@ -43,19 +44,22 @@
                 <span class="input-group-addon">$</span><input class="form-control beef-price" data-lean-percent="85" type="text" name="name" value="10.5"><span class="input-group-addon">/lb</span>
               </div>
             </div>
-
-            <br />
-            <input class="btn btn-primary" id="calculate-button" type="button" name="name" value="Which is best?">
+            <input class="btn btn-primary pull-right" id="calculate-button" type="button" name="submit-button" value="Which is best?">
           </form>
-      </div>
-      <div class="col-md-4">
-        <h1>And the winner is...</h1>
-        <div id="results">
-            <div id="cheapest">
-            </div>
-            <ul id="all" class="hidden">
-            </ul>
         </div>
+      </div>
+    </div>
+    <div class="container slide" id="results-slide">
+      <div class="row">
+        <div class="col-md-4">
+          <h1>And the winner is...</h1>
+          <div id="results">
+              <div id="cheapest">
+              </div>
+              <ul id="all" class="hidden">
+              </ul>
+              <input class="btn btn-primary" id="start-button" type="button" value="Start Again" />
+          </div>
       </div>
     </div>
   </div>

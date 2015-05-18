@@ -26,6 +26,15 @@ $(document).ready(function() {
     prices.forEach(function(price) {
         $('#results #all').append('<li>' + price.percent + '% beef: $' + price.price + '/lb</li>');
     })
+
+    $('.slide').hide();
+    $('#results-slide').show();
+  });
+
+
+  $('input#start-button').click(function() {
+    $('.slide').hide();
+    $('#calculator-slide').show();
   });
 
   function getRealPrice(percentLean, price) {
