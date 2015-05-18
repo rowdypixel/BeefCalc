@@ -14,3 +14,13 @@
 .hidden-height {
   height: 0px;
 }
+
+.footer {
+  padding-top: 25px;
+  text-align: center;
+  font-size: 0.85em;
+}
+
+.footer .glyphicon {
+  font-size: 0.75em;
+}
