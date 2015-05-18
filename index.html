@@ -19,18 +19,27 @@
   </head>
   <body>
     <div class="container">
-      <h1>Enter the Beef Prices</h1>
-      <form>
-        73/27<input class="form-control beef-price" data-lean-percent="73" type="text" name="name" value="3.26">
-        80/20<input class="form-control beef-price" data-lean-percent="80" type="text" name="name" value="10">
-        85/15<input class="form-control beef-price" data-lean-percent="85" type="text" name="name" value="10000">
-        <br />
-        <input class="btn btn-primary" id="calculate-button" type="button" name="name" value="Which is best?">
-      </form>
-
-      <div id="results">
-
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Enter the Beef Prices</h1>
+          <form>
+            73/27<input class="form-control beef-price" data-lean-percent="73" type="text" name="name" value="3.26">
+            80/20<input class="form-control beef-price" data-lean-percent="80" type="text" name="name" value="10">
+            85/15<input class="form-control beef-price" data-lean-percent="85" type="text" name="name" value="10.5">
+            <br />
+            <input class="btn btn-primary" id="calculate-button" type="button" name="name" value="Which is best?">
+          </form>
       </div>
+      <div class="col-md-4">
+        <h1>And the winner is...</h1>
+        <div id="results">
+            <div id="cheapest">
+            </div>
+            <ul id="all" class="hidden">
+            </ul>
+        </div>
+      </div>
+    </div>
   </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -21,7 +21,11 @@ $(document).ready(function() {
     });
 
 
-    $('#results').html(prices[0].percent + '% beef - $' + prices[0].price + '/lb');
+    $('#results #cheapest').html(prices[0].percent + '% beef - $' + prices[0].price + '/lb');
+
+    prices.forEach(function(price) {
+        $('#results #all').append('<li>' + price.percent + '% beef: $' + price.price + '/lb</li>');
+    })
   });
 
   function getRealPrice(percentLean, price) {
