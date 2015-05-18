@@ -18,17 +18,20 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Enter the Beef Prices</h1>
-    <form>
-      73/27<input class="form-control" id="73-27-price" type="text" name="name" value="3.26">
-      80/20<input class="form-control" id="80-20-price" type="text" name="name" value="10">
-      85/15<input class="form-control" id="85-15-price" type="text" name="name" value="10000">
-      <input class="btn btn-primary" id="calculate-button" type="button" name="name" value="Which is best?">
-    </form>
+    <div class="container">
+      <h1>Enter the Beef Prices</h1>
+      <form>
+        73/27<input class="form-control beef-price" data-lean-percent="73" type="text" name="name" value="3.26">
+        80/20<input class="form-control beef-price" data-lean-percent="80" type="text" name="name" value="10">
+        85/15<input class="form-control beef-price" data-lean-percent="85" type="text" name="name" value="10000">
+        <br />
+        <input class="btn btn-primary" id="calculate-button" type="button" name="name" value="Which is best?">
+      </form>
 
-    <div id="results">
+      <div id="results">
 
-    </div>
+      </div>
+  </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
