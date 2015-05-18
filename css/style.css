@@ -1,3 +1,7 @@
 body .slide:not(:first-child) {
   display: none;
 }
+
+#results #cheapest {
+  font-size: 2em;
+}
