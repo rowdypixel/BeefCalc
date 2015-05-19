@@ -6,6 +6,9 @@
 .jumbotron {
   text-align: center;
 }
+.jumbotron h1 {
+  margin: 0;
+}
 
 .slide {
   transition: height 5s ease-in-out;
@@ -16,6 +19,7 @@
 }
 
 .footer {
+  color: #8f8f8f;
   padding-top: 25px;
   text-align: center;
   font-size: 0.85em;
