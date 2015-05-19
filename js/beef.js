@@ -2,6 +2,7 @@ $(document).ready(function() {
 
   $('input#calculate-button').click(function() {
 
+    $('#results #all').html('');
     var prices = [];
 
     $('input.beef-price').each(function() {
