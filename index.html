@@ -1,83 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Beef Calc - Get "Moo"re for your money!</title>
-
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <title>Beef Calc - Get "Moo"re for your money!</title>
+      <!-- Bootstrap -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="jumbotron">
-      <div class="container">
-        <img src="img/logo.png" />
-        <h1>The Ground Beef Calculator</h1>
-        <h3>Get "moo"re for your money!</h3>
+      <![endif]-->
+   </head>
+   <body>
+      <div class="jumbotron">
+         <div class="container">
+            <img src="img/logo.png" />
+            <h1>The Ground Beef Calculator</h1>
+            <h3>Get "moo"re for your money!</h3>
+         </div>
       </div>
-    </div>
-    <div class="container slide" id="calculator-slide">
-      <div class="row">
+      <div class="container slide" id="calculator-slide">
+      <div class="row center-block text-center">
+         <div class="col-md-6 col-md-offset-3">
+            <h1>Choose your beef</h1>
+            <form class="form-inline">
+               <div id="beefs">
+
+               </div>
+               <button class="btn btn-default spacing-top-small" id="new-button" type="button" data-toggle="modal" data-target="#new-beef-modal">Add more beef</button>
+            </form>
+         </div>
+      </div>
+      <div class="row spacing-top">
         <div class="col-md-12">
-          <h1>Enter Price Per Pound</h1>
-          <form>
-            <div class="form-group">
-              <label>73/27</label>
-              <div class="input-group">
-                <span class="input-group-addon">$</span><input class="form-control beef-price" data-lean-percent="73" type="text" value="3.26"><span class="input-group-addon">/lb</span>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label>80/20</label>
-              <div class="input-group">
-                <span class="input-group-addon">$</span><input class="form-control beef-price" data-lean-percent="80" type="text" value="10"><span class="input-group-addon">/lb</span>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label>85/15</label>
-              <div class="input-group">
-                <span class="input-group-addon">$</span><input class="form-control beef-price" data-lean-percent="85" type="text" value="10.5"><span class="input-group-addon">/lb</span>
-              </div>
-            </div>
-            <input class="btn btn-primary pull-right" id="calculate-button" type="button" name="submit-button" value="Which is best?">
-          </form>
+          <input class="btn btn-primary center-block" id="calculate-button" type="button" name="submit-button" value="Which is best?">
+          <p class="text-center spacing-top-small"><a href="" data-toggle="modal" data-target="#not-beefitarian-modal">Don't eat ground beef?</a></p>
         </div>
       </div>
     </div>
-    <div class="container slide hidden" id="results-slide">
-      <div class="row">
-        <div class="col-md-4">
-          <h1>And the winner is...</h1>
-          <div id="results">
-              <div id="cheapest">
-              </div>
-              <h2>All Prices</h2>
-              <ul id="all">
-              </ul>
-              <input class="btn btn-primary" id="start-button" type="button" value="Start Again" />
+      <div class="container slide hidden" id="results-slide">
+         <div class="row">
+            <div class="col-md-12">
+              <div class="center-block">
+               <h1>And the winner is...</h1>
+               <div id="results">
+                  <div id="cheapest">
+                  </div>
+                  <hr />
+                  <h3>All Prices</h3>
+                  <ul id="all">
+                  </ul>
+                  <input class="btn btn-primary spacing-top" id="start-button" type="button" value="Start Again" />
+               </div>
+            </div>
           </div>
+         </div>
       </div>
-    </div>
-  </div>
-  <div class="footer container">
-      Made with <span class="glyphicon glyphicon-heart"></span> by <a href="http://rowdypixel.com/" target="_blank">rowdypixel</a>.
-  </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/beef.js"></script>
-  </body>
+      <div class="footer container">
+         Made with <span class="glyphicon glyphicon-heart"></span> by <a href="http://rowdypixel.com/" target="_blank">rowdypixel</a>.
+      </div>
+
+      <!-- New Beef Modal -->
+      <div class="modal fade" id="new-beef-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Add your own</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row new-beef-row">
+                 <div class="col-md-12">
+                   <div class="alert alert-danger hidden" role="alert">You must enter numbers.</div>
+                    <form>
+                    <div class="form-group" id="new-leanness-group">
+                       <label class="control-label" for="new-lean-percent">Leanness</label>
+                       <div class="input-group">
+                          <input class="form-control" id="new-lean-percent" type="text"><span class="input-group-addon">%</span>
+                       </div>
+                    </div>
+                    <div class="form-group" id="new-price-group">
+                       <label class="control-label" for="new-beef-price">Price</label>
+                       <div class="input-group">
+                          <span class="input-group-addon">$</span><input class="form-control" id="new-beef-price" type="text"><span class="input-group-addon">/lb</span>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" id="close-new-beef-button" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="save-new-beef-button">Add beef</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+
+      <!--Not beefitarian Modal -->
+      <div class="modal fade" id="not-beefitarian-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Don't eat ground beef?</h4>
+            </div>
+            <div class="modal-body">
+              <p>No problem. You have a few options.<p>
+                <ol>
+                  <li>Enter the leanness of your ground poultry.</li>
+                  <li>Use 100% lean for veggie burgers.</li>
+                  <li>Stop using it. It's a website about ground beef.</li>
+                </ol>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" id="close-new-beef-button" data-dismiss="modal">Close</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+
+
+
+
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/beef.js"></script>
+   </body>
 </html>
