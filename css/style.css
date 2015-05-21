@@ -48,3 +48,40 @@
 .has-warning .checkbox, .has-warning .checkbox-inline, .has-warning .control-label, .has-warning .help-block, .has-warning .radio, .has-warning .radio-inline, .has-warning.checkbox label, .has-warning.checkbox-inline label, .has-warning.radio label, .has-warning.radio-inline label {
  color: #ff0000;
 }
+
+@media screen and (max-width: 800px) {
+  .beef {
+    clear: both;
+  }
+  .beef .input-group {
+    float: left;
+    width: 80%;
+    margin-top: 5px;
+  }
+  label {
+    float: left;
+    margin-right: 5px;
+    margin-top: 10px;
+  }
+  .delete-beef-button {
+    float: right;
+    margin-top: 5px;
+  }
+  #new-button {
+    clear: both;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .beef .input-group {
+      width: 71%;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .beef .input-group {
+      width: 85%;
+    }
+
+}

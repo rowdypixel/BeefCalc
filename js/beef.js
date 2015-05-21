@@ -87,10 +87,10 @@ $(document).ready(function() {
     price = parseFloat(Math.round(price * 100) / 100).toFixed(2); //Always show as 1.00
 
     $(this).attr("data-dismiss", 'modal');
-    var tpl ='<div class="form-group spacing-top-small">\
+    var tpl ='<div class="form-group spacing-top-small beef">\
       <label>##LEAN##% lean</label>\
       <div class="input-group">\
-        <span class="input-group-addon">$</span><input class="form-control beef-price" data-lean-percent="##LEAN##" type="text" value="##PRICE##"><span class="input-group-addon">/lb</span>\
+        <span class="input-group-addon">$</span><input class="form-control beef-price" data-lean-percent="##LEAN##" type="number" value="##PRICE##"><span class="input-group-addon">/lb</span>\
       </div>\
       <button class="btn btn-danger delete-beef-button">&times;</button>\
     </div>';
