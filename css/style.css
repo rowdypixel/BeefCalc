@@ -50,7 +50,10 @@
 }
 
 @media screen and (max-width: 800px) {
-  .input-group {
+  .beef {
+    clear: both;
+  }
+  .beef .input-group {
     float: left;
     width: 80%;
     margin-top: 5px;
@@ -64,4 +67,21 @@
     float: right;
     margin-top: 5px;
   }
+  #new-button {
+    clear: both;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .beef .input-group {
+      width: 71%;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .beef .input-group {
+      width: 85%;
+    }
+
 }
