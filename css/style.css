@@ -1,7 +1,10 @@
 #results #cheapest {
   font-size: 2em;
 }
-
+#results #all {
+  margin:0;
+  padding:0;
+}
 
 .jumbotron {
   text-align: center;
@@ -13,9 +16,23 @@
 .slide {
   transition: height 5s ease-in-out;
 }
+.slide .btn-primary {
+  font-size: 2em;
+}
 
-.hidden-height {
-  height: 0px;
+#results-slide {
+  text-align: center;
+}
+
+#results-slide ul {
+  list-style-type: none;
+}
+
+.spacing-top {
+  margin-top: 20px;
+}
+.spacing-top-small {
+  margin-top: 5px;
 }
 
 .footer {
@@ -27,4 +44,7 @@
 
 .footer .glyphicon {
   font-size: 0.75em;
+}
+.has-warning .checkbox, .has-warning .checkbox-inline, .has-warning .control-label, .has-warning .help-block, .has-warning .radio, .has-warning .radio-inline, .has-warning.checkbox label, .has-warning.checkbox-inline label, .has-warning.radio label, .has-warning.radio-inline label {
+ color: #ff0000;
 }
